@@ -567,3 +567,49 @@ Start je website en ga naar de url. Als alles goed is gegaan zie je nog geen pos
 
 Ga naar je admin menu en druk dan onder "core" op "+ Add". Voeg een titel en inhoud toe, sla je post op en ga naar je site, dan die je de naam van de post en de inhoud.
 
+Nu gaan je een formulier maken waar je blog posts kan aanmaken.
+
+Maak een nieuwe url aan met de naam maak_post.
+
+Maak ook een maak_post.html aan in de templates folder, zorg dat de code er ongeveer zo uitziet.
+
+```html
+<h1>Maak een nieuwe post</h1> 
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <input type="text" name="titel" placeholder="Titel"> <!--Invul veld titel-->
+    <input type="text" name="inhoud" placeholder="Inhoud"> <!--Invul veld inhoud-->
+
+    <button type="submit">Maak post</button> <!--Post knop-->
+</form>
+```
+
+Ga nu naar /core/views.py, voeg daar deze view toe.
+
+```python
+def maak_post(request): # Maak view
+    if request.method == 'POST': # Als er een POST request binnenkomt dan ...
+        titel = request.POST.get('titel') # Haal informatie op van de html
+        inhoud = request.POST.get('inhoud')
+        if titel: # Als de titel niet leeg is dan...
+            Post.objects.create(titel=titel, inhoud=inhoud)
+            return redirect('post_list')
+        else: # Als de titel leeg is dan ...
+            return render(request, "maak_post.html") # Reload de pagina
+    else: # Als er geen formulier is ingevuld dan...
+        return render(request, "maak_post.html") # Blijf op de pagina
+```
+
+Start jouw site en test of je een post kan aanmaken, en of jij de post kan zien.
+
+Maar nu kan iedereen een post aanmaken dat wil je niet, dus voeg dit toen vlak onder def maak_post().
+
+```python
+if not request.user.is_superuser: # Als je geen superuser bent dan...
+    return render(request, 'index.html') # Ga naar de hoofd pagina
+return render(request, 'maak_post.html') # Ga naar de pagina
+```
+
+Ga nu eens naar de pagina waar je posts aanmaakt, kan je op de pagina?
+
+Ga nu werken aan de opdracht.

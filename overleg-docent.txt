@@ -5,6 +5,5 @@
   woorden
 - sqlite --> sqlite3 cli
 - sql opdracht??
-- tegen ai
 - begin blok?
 - 2fa?
