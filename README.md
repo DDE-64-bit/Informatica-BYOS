@@ -1,6 +1,50 @@
+<h1>Basis</h1>
+Voor deze informatica opdracht ga je niet meer werken met thonny maar met github codespaces, hieronder vind je een uitleg om daarmee te beginnen.
+
+### Stap 1
+Maak een GitHub-account aan, doe dat [hier](https://github.com/signup).
+
+**Let op: het is handig om NIET je schoolmail te gebruiken voor het aanmelden, zodat je nadat jij van school bent nog steeds bij het account kan.**
+
+### Stap 2
+!!! Vanaf hier overleg docent !!!
+
+Ga dan naar: https://github.com/{gebruikersnaam}, druk dan op **Reposotories** en daarna op de groene knop met **New** erop.
+
+Vul dan een naam en een korte beschijving in. Druk dan op **Public/Private**, open het menu van license en kies dan voor **Apache License 2.0**, verander de rest niet. Druk dan op **Create Repository**.
+
+Wacht totdat de site geladen is en ga dan naar het menu **Code**, daarna naar **COdespaces**, totslot druk op **Create codespace on main**
+
+### Stap 3
+Nu je alles hebt opgestart kan je bijna beginnen met programmeren, eerst nog wat basis dingen.
+
+* Helemaal links zie je al jouw bestanden.
+* Onderin zie je jouw terminal (ookwel cli of commandline genoemd).
+* Boven de terminal zitten jouw geopende bestanden.
+
+Sluit het welkoms bericht af en begin met django.
+
+<br><br>
 <h1>Project opzetten</h1>
 
+Als eerste zullen wij django moeten installeren, daarvoor gaan we meteen naar de terminal type daar dit commando in.
+
+```bash
+pip install django
+```
+
+En ook dit commando.
+
+```bash
+pip install colorama
+```
+
+Nu heb je via pip 2 tools gedownload, namelijk django en colorama.
+
+<br>
+
 Om te beginnen met django moet je eerst een project aanmaken. Ga naar de locatie waar het project moet komen. Type dan dit in de terminal.
+
 ```bash 
 django-admin startproject "projectname"
 ```
@@ -13,6 +57,9 @@ django-admin startapp core
 ```
 
 Ga dan naar /core en maak een bestand genaamd urls.py aan.
+
+/core betekend in de map core.
+
 
 Voeg deze code toe aan het bestand /core/urls.py.
 
@@ -229,9 +276,7 @@ Nu kan je naar w3schools gaan en zelf oefenen met html en css. Je hoeft niet all
 **Tip: Er staat bij w3schools vaak een "Try it Yourself" knop, daar kan makkelijk oefenen met html en css.**
 
 
-!!! overleg dit eerst met docent !!!
-
-Als je html en css door denkt te hebben, probeer dan een mooie thuispagina te maken voor jouw site. Kies een leuk thema uit voor jouw site (probeer creatief te zijn).
+Probeer nu eens te oefenen met html en css, probeer maar eens een mooie thuis pagina te maken. Als je denkt dat je voldoende hebt geoefend ga dan door naar databases
 
 
 <br><br>
@@ -246,7 +291,7 @@ Als je die in jouw template map hebt staan met de naam login.html.
 
 Zorg dat bij de tag form het atribuut action leeg is en dat je het atribuut method="post" toegevoegd is.
 
-Dan zou het er ongeveer zo uitziet (wel opgemaakt met css).
+Dan zou het er ongeveer zo uitziet.
 
 ```html
 <form action="" method="POST"> <!--Gebruik POST voor extra veiligheid-->
@@ -296,7 +341,7 @@ Als jouw formulier geen POST maar een GET geeft, dan ben je vergeten om je metho
 
 Maak nu een html bestand voor het aanmeleden, zorg dat je de velden username, mail, password en repeat password hebt. 
 
-Als je dat hebt ziet je code er ongeveer zo uit (wel met css).
+Als je dat hebt ziet je code er ongeveer zo uit.
 
 ```html
 <form action="" method="POST">
