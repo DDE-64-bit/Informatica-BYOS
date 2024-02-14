@@ -1,1 +1,1 @@
-SELECT id FROM auth_user WHERE username ="19200";
+SELECT id FROM auth_user WHERE username ="admin";
