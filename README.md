@@ -7,7 +7,6 @@ Maak een GitHub-account aan, doe dat [hier](https://github.com/signup).
 **Let op: het is handig om NIET je schoolmail te gebruiken voor het aanmelden, zodat je nadat jij van school bent nog steeds bij het account kan.**
 
 ### Stap 2
-!!! Vanaf hier overleg docent !!!
 
 Ga dan naar: https://github.com/{gebruikersnaam}, druk dan op **Reposotories** en daarna op de groene knop met **New** erop.
 
